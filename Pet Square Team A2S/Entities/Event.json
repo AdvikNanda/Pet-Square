@@ -1,0 +1,48 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "meetup",
+        "adoption",
+        "training",
+        "health",
+        "social",
+        "volunteer"
+      ]
+    },
+    "attendees_count": {
+      "type": "number",
+      "default": 0
+    },
+    "organizer_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "date",
+    "location"
+  ]
+}

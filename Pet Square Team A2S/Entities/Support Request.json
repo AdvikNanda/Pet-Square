@@ -1,0 +1,46 @@
+{
+  "name": "SupportRequest",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "pet_sitting",
+        "advice",
+        "recommendation",
+        "emergency",
+        "lost_pet",
+        "found_pet"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "resolved"
+      ],
+      "default": "open"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "responses_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

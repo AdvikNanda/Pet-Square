@@ -1,0 +1,75 @@
+{
+  "name": "Pet",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Pet's name"
+    },
+    "species": {
+      "type": "string",
+      "enum": [
+        "dog",
+        "cat",
+        "bird",
+        "rabbit",
+        "fish",
+        "hamster",
+        "reptile",
+        "other"
+      ],
+      "description": "Type of pet"
+    },
+    "breed": {
+      "type": "string",
+      "description": "Pet's breed"
+    },
+    "age": {
+      "type": "string",
+      "description": "Pet's age"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL to pet's photo"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short bio about the pet"
+    },
+    "location": {
+      "type": "string",
+      "description": "Owner's general location"
+    },
+    "dietary_preferences": {
+      "type": "string",
+      "description": "Dietary preferences and restrictions"
+    },
+    "activity_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "very_high"
+      ],
+      "description": "Pet's activity level"
+    },
+    "health_notes": {
+      "type": "string",
+      "description": "Health conditions or notes"
+    },
+    "quiz_completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the Know Your Pet quiz has been completed"
+    },
+    "quiz_results": {
+      "type": "object",
+      "description": "Results from the Know Your Pet quiz"
+    }
+  },
+  "required": [
+    "name",
+    "species"
+  ]
+}

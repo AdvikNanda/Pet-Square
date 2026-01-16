@@ -1,0 +1,49 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "description": "Post content"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Optional image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "general",
+        "health",
+        "training",
+        "adoption",
+        "lost_found",
+        "question",
+        "tip"
+      ],
+      "default": "general"
+    },
+    "pet_id": {
+      "type": "string",
+      "description": "Associated pet ID"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_avatar": {
+      "type": "string"
+    },
+    "likes_count": {
+      "type": "number",
+      "default": 0
+    },
+    "comments_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "content",
+    "category"
+  ]
+}

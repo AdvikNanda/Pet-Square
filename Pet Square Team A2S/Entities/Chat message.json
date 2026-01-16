@@ -1,0 +1,35 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user who sent the message"
+    },
+    "pet_id": {
+      "type": "string",
+      "description": "ID of the pet being discussed (optional)"
+    },
+    "message": {
+      "type": "string",
+      "description": "User's message content"
+    },
+    "response": {
+      "type": "string",
+      "description": "AI assistant's response"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of uploaded image (if any)"
+    },
+    "context": {
+      "type": "object",
+      "description": "Additional context used for the response"
+    }
+  },
+  "required": [
+    "user_email",
+    "message",
+    "response"
+  ]
+}
